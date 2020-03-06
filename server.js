@@ -1,13 +1,11 @@
 const express = require('express');
-const faker = require('faker');
 const bodyParser = require('body-parser');
 const expressLayout = require('express-ejs-layouts');
 const app = express();
 const port = process.env.PORT || 3000;
 
 
-
-// CONFIGURANDO O SERVIDOR 
+// CONFIGURANDO A APLICAÇÃO
 
 // type template
 app.set('view engine', 'ejs');
@@ -25,19 +23,19 @@ app.listen(port, () => {
 });
 
 
-// exportar configs do app
+// exportar configs do app para outras partes da aplicaçao
 module.exports = {
-  app,
-  faker
+  app
 };
 
 
+// tratamento caso tem erros nas rotas
 try {
   // carrega as rotas 
-  const routers = require('./routers/routesProduto');
+  const routers = require('./routers/controllerUsuario');
 
 } catch (e) {
-  console.log("houve erro => " + err.Message);
+  console.log("houve erro => " + e);
 }
 
 
