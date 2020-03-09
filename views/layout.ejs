@@ -8,28 +8,37 @@
   <!-- carrega o css -->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
-  
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
 </head>
 
-  <body>
-      <header>
-        <nav class="navbar navbar-inverse">
-          <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/usuario">Usuário</a></li>
-            <li><a href="/sobre">Sobre Nós</a></li>
-          </ul>
-        </nav>
-      </header>
+<!-- body -->
+<body>
+  <header>
+    <nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/usuario">Usuário</a></li>
+        <li><a href="/sobre">Sobre Nós</a></li>
+        <li><a href="/cadastrar">Cadastrar</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <main>
-        <div class="container">
-          <%- body %>
-        </div>
-      </main>
+  <main>
+    <div class="container">
+      <%- body %>
+    </div>
+  </main>
 
-      <footer>
+  <footer>
 
-      </footer>
-  </body>
+  </footer>
+</body>
+
 </html>

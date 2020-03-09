@@ -4,7 +4,7 @@ body {
 }
 
 html{
-  background:brown;
+  background:gray;
 }
 
 header .navbar {
@@ -15,7 +15,7 @@ header .navbar {
 main {
   min-height: 500px;
   padding: 50px 0;
-  background:brown;
+  background: gray;
 }
 
 thead.thead-dark {
@@ -23,6 +23,7 @@ thead.thead-dark {
   color: aliceblue;
 }
 
+/* pagina sobre  */
 .sobre {
 background: aliceblue;
 border-radius: 10px;
@@ -30,6 +31,10 @@ border-radius: 10px;
 
 
 /* tabela */
+table{
+  margin-top: 10px;
+  border-radius: 8px;
+}
 tbody{
   background: aliceblue;
   border: solid 1px black;
@@ -37,4 +42,31 @@ tbody{
 
 .titleUsuario{
 color: aliceblue;
+text-align: left;
+}
+
+/* page home */
+.titleHome{
+color: snow;
+}
+
+
+/* formulario Usuario */
+.formUsuario{
+  background:saddlebrown;
+  padding: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.formUsuario label{
+color: aliceblue;
+}
+
+.titleUsuario{
+  color:white;
+}
+
+.btn-primary.active{
+  cursor: pointer;
 }

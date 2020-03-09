@@ -1,11 +1,19 @@
 <%- contentFor('body') %>
 
+
 <!-- chama as funcoes dos usuarios -->
 <%- include('../../operation/operationUsuario.ejs'); %>
 
 
 <!-- titulo da pagina -->
-<h1 class="titleUsuario">Tabela de Usuários : </h1>
+<h1 class="titleUsuario">Tabela de Usuários  </h1>
+
+
+<!-- cadastrar usuarios -->
+<form>
+  <a href="/cadastrar" class="btn btn-primary btn-lg active chamaCadastro" role="button"
+    aria-pressed="true">Cadastrar</a>
+</form>
 
 
 <!-- tabela de dados -->
@@ -22,7 +30,7 @@
   </thead>
 
   <tbody>
-    <% for (user of usuarios){%>
+    <% for (user of usuarios){ %>
     <tr>
       <td><%= user.name %></td>
       <td><%= user.phone %></td>
@@ -30,10 +38,27 @@
       <td><%= user.country %></td>
       <td><%= user.zipCode %></td>
       <td>
-        <button type="button" class="btn btn-primary" onclick="createUsuario()">Editar</button>
-        <button type="button" class="btn btn-danger" onclick="removerUsuario()">Remover</button>
+        <button type="button" class="btn btn-info" onclick="editarUsuario('<%= user.id %>')">Editar</button>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Remover</button>
       </td>
     </tr>
     <% } %>
   </tbody>
 </table>
+
+
+
+<!-- Modal Confirmação -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+       Tem certeza que deseja remover o dado.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" onclick="removerUsuario('<%= user.id %>')">Sim</button>
+      </div>
+    </div>
+  </div>
+</div>
