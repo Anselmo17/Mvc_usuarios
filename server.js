@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 // type template
 app.set('view engine', 'ejs');
 app.use(expressLayout);
-//app.use(express.json());
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // busca o template no diretorio

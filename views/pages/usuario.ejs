@@ -30,7 +30,10 @@
   </thead>
 
   <tbody>
+    <% let idUsuario = '' %>
+    
     <% for (user of usuarios){ %>
+      <%  idUsuario = user.id; %>
     <tr>
       <td><%= user.name %></td>
       <td><%= user.phone %></td>
@@ -57,7 +60,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-        <button type="button" class="btn btn-success" data-dismiss="modal" onclick="removerUsuario('<%= user.id %>')">Sim</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" onclick="removerUsuario('<%= idUsuario %>')">Sim</button>
       </div>
     </div>
   </div>

@@ -1,28 +1,28 @@
 
 
 <!-- Formulario de Cadastro -->
-  <form class="formUsuario">
+  <form class="formUsuario" action="/cadastrar" method="POST">
     <h2 class="titleUsuario">Cadastro de Usuário</h2>
 
       <div class="form-group">
         <label for="name">Nome : </label>
-        <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Digite o nome completo">
+        <input type="text" class="form-control" name ="name" aria-describedby="name" placeholder="Digite o nome completo" value="">
       </div>
       <div class="form-group">
         <label for="telefone">Telefone : </label>
-        <input type="number" class="form-control" id="telefone" placeholder="Digite o telefone">
+        <input type="number" class="form-control" name="telephone" placeholder="Digite o telefone">
       </div>
       <div class="form-group ">
         <label for="city">Cidade</label>
-        <input type="text" class="form-control" id="city" placeholder="Digite a cidade">
+        <input type="text" class="form-control" name="city" placeholder="Digite a cidade">
       </div>
       <div class="form-group">
         <label for="country">País : </label>
-        <input type="text" class="form-control" id="country" placeholder="Digite o país">
+        <input type="text" class="form-control" name="country" placeholder="Digite o país">
       </div>
       <div class="form-group ">
         <label for="zipCode">Cep : </label>
-        <input type="number" class="form-control" id="zipCode" placeholder="Digite o cep">
+        <input type="number" class="form-control" name="zipCode" placeholder="Digite o cep">
       </div>
       <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
       <button type="reset" class="btn btn-primary btn-lg">Limpar</button>
